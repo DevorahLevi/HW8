@@ -38,7 +38,7 @@ public class LastRecursionTester
 
         //Testing array with odd number of elements
         int [] array2 = {5, 78, 43, 2, 54};
-        test  = tester.findMax(array2, 0, array.length - 1);
+        test  = tester.findMax(array2, 0, array2.length - 1);
         assertEquals(78, test);
 
     }
