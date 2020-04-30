@@ -1,8 +1,6 @@
 import edu.ti.caih313.recursion.LastRecursion;
 import org.junit.Test;
 
-import java.math.BigInteger;
-import java.util.Scanner;
 import static org.junit.Assert.assertEquals;
 
 public class LastRecursionTester
@@ -33,9 +31,15 @@ public class LastRecursionTester
     public void testFindLargestValue() {
         LastRecursion tester = new LastRecursion();
 
+        //Testing array with even number of elements
         int [] array = {4, 6, 12, 91};
-        int test  = tester.findLargestValue(array);
+        int test  = tester.findMax(array, 0, array.length - 1);
         assertEquals(91, test);
+
+        //Testing array with odd number of elements
+        int [] array2 = {5, 78, 43, 2, 54};
+        test  = tester.findMax(array2, 0, array.length - 1);
+        assertEquals(78, test);
 
     }
 }

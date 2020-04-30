@@ -1,6 +1,7 @@
 package edu.ti.caih313.recursion;
 import java.math.BigInteger;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class LastRecursion
 {
@@ -46,8 +47,30 @@ public class LastRecursion
         }
     }
 
-    public static int findLargestValue(int[] array)
+    public static int findMax(int[] array, int startIndex, int endIndex)
     {
-        int maxValue;
+        if (startIndex == endIndex)
+        {
+            return array[startIndex];
+        }
+        else if (endIndex == startIndex + 1)
+        {
+            if (array[startIndex] > array[endIndex])
+            {
+                return array[startIndex];
+            }
+            else
+            {
+                return array[endIndex];
+            }
+        }
+        else
+        {
+            int halfwayPoint = (array.length - 1) / 2;
+            int firstHalf = findMax(array, startIndex, halfwayPoint);
+            int lastHalf = findMax(array, halfwayPoint + 1, endIndex);
+
+            return (firstHalf > lastHalf) ? firstHalf : lastHalf;
+        }
     }
 }
