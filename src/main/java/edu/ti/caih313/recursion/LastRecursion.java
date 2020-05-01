@@ -66,7 +66,7 @@ public class LastRecursion
         }
         else
         {
-            int halfwayPoint = (array.length - 1) / 2;
+            int halfwayPoint = (startIndex + endIndex) / 2;
             int firstHalf = findMax(array, startIndex, halfwayPoint);
             int lastHalf = findMax(array, halfwayPoint + 1, endIndex);
 
