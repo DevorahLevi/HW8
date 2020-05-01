@@ -57,8 +57,8 @@ public class LastRecursionTester
         assertEquals(102, test);
 
         //Testing array with largest item at the end
-        int [] array6 = {3, 7, 2, 12, 45, 89, 321};
+        int [] array6 = {3, 7, 2, 12, 45, 89, 212};
         test  = tester.findMax(array6, 0, array6.length - 1);
-        assertEquals(321, test);
+        assertEquals(212, test);
     }
 }
